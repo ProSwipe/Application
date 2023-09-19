@@ -104,4 +104,8 @@ if (!empty($searchTerm)) {
         </div>
     <?php endif ?>
 </main>
+
+<div class="flex justify-center">
+    <?php include('../../include/footer.php'); ?>
+</div>
 </body>

@@ -14,6 +14,7 @@ if (!$idProfil) {
 
 $pro = getPro($idProfil);
 ?>
+<body>
 
 <header class="p-[2rem] flex justify-center">
     <img
@@ -50,3 +51,7 @@ $pro = getPro($idProfil);
     </div>
 </main>
 
+<div class="flex justify-center">
+    <?php include('../../include/footer.php'); ?>
+</div>
+</body>

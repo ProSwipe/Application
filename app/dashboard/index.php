@@ -49,11 +49,6 @@ checkConnection();
         </div>
     </div>
 
-    <div
-        class="flex bg-blue-400 rounded-[20px] h-[4rem] w-[20rem] justify-around items-center">
-        <img class="h-[2rem]" src="../assets/close.svg" alt="close" />
-        <img class="h-[2rem]" src="../assets/close.svg" alt="close" />
-        <img class="h-[2rem]" src="../assets/close.svg" alt="close" />
-    </div>
+    <?php include('../include/footer.php'); ?>
 </main>
 </body>
