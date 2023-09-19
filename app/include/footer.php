@@ -6,7 +6,7 @@
     <a data-turbo-preload href="/dashboard/search/index.php">
         <img class="h-[2rem] text-black" src="../assets/search.svg" alt="close" />
     </a>
-    <a>
-        <img class="h-[2rem]" src="../assets/close.svg" alt="close" />
+    <a data-turbo-preload href="/dashboard/profile/index.php">
+        <img class="h-[2rem]" src="../assets/profile.svg" alt="close" />
     </a>
 </div>

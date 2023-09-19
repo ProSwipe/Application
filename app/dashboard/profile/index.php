@@ -38,4 +38,8 @@ checkConnection();
         </a>
 
     </div>
+</div>
+<div class="flex justify-center mt-12">
+    <?php include('../../include/footer.php'); ?>
+</div>
 </body>
