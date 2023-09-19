@@ -534,9 +534,95 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-red-950 {
-  --tw-text-opacity: 1;
-  color: rgb(69 10 10 / var(--tw-text-opacity));
+.flex {
+  display: flex;
+}
+
+.h-\[2rem\] {
+  height: 2rem;
+}
+
+.h-\[3rem\] {
+  height: 3rem;
+}
+
+.h-\[4rem\] {
+  height: 4rem;
+}
+
+.w-\[15rem\] {
+  width: 15rem;
+}
+
+.w-\[20rem\] {
+  width: 20rem;
+}
+
+.w-\[3rem\] {
+  width: 3rem;
+}
+
+.w-\[4rem\] {
+  width: 4rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-\[2rem\] {
+  gap: 2rem;
+}
+
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
+.p-\[\.5rem\] {
+  padding: .5rem;
+}
+
+.p-\[1rem\] {
+  padding: 1rem;
+}
+
+.p-\[2rem\] {
+  padding: 2rem;
+}
+
+.px-\[2rem\] {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-\[2rem\] {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .text-red-50 {
