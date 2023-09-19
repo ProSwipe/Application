@@ -53,3 +53,37 @@ function getUserPassword($email)
 
     return false;
 }
+
+function getPro($id) {
+    global $db;
+
+    $id = $db->real_escape_string($id);
+
+    $query = "SELECT * FROM professionnals WHERE id='$id'";
+    $result = $db->query($query);
+    $row = $result->fetch_assoc();
+
+    if ($row) {
+        return $row;
+    }
+
+    return false;
+}
+
+function getProFromJob($job) {
+    global $db;
+
+    $job = $db->real_escape_string($job);
+
+    $query = "SELECT * FROM professionnals WHERE job LIKE '%$job%'";
+    $result = $db->query($query);
+
+    $professionals = array();
+
+    while ($row = $result->fetch_assoc()) {
+        $professionals[] = $row;
+    }
+
+    return $professionals;
+}
+
