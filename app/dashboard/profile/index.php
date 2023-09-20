@@ -25,14 +25,14 @@ checkConnection();
 <div class="flex flex-col px-[4rem]">
 
     <div class="mt-6 flex justify-center">
-        <a href="#"
-           class="text-center transform hover:scale-110 motion-reduce:transform-none duration-300 bg-sky-600 hover:bg-sky-700 text-gray-100 py-4 px-24 rounded-xl items-center w-full">
+        <a href="mon_profil.html"
+           class="text-center transform hover:scale-110 motion-reduce:transform-none duration-300 bg-sky-600 hover:bg-sky-700 text-gray-100 py-4 px-12 rounded-xl items-center w-full">
             <span>Mon profile</span>
         </a>
 
     </div>
     <div class="mt-6 flex justify-center">
-        <a href="#"
+        <a href="interets.html"
            class="text-center transform hover:scale-110 motion-reduce:transform-none duration-300 bg-sky-600 hover:bg-sky-700 text-gray-100 py-4 px-12 rounded-xl items-center w-full">
             <span>Mes centres d'intérêts</span>
         </a>
