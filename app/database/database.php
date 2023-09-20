@@ -118,3 +118,31 @@ function getProFromJob($job) {
     return $professionals;
 }
 
+function addUserProTable($userid, $proId) {
+    global $db;
+
+    $userid = $db->real_escape_string($userid);
+    $proId = $db->real_escape_string($proId);
+
+    $query = "INSERT IGNORE INTO userPro (userId, proId) 
+              VALUES('$userid', '$proId')";
+
+    return $db->query($query);
+}
+
+function getAllProOfUser($userId) {
+    global $db;
+
+    $userId = $db->real_escape_string($userId);
+
+    $query = "SELECT * FROM userPro WHERE userId='$userId'";
+    $result = $db->query($query);
+
+    $pros = array();
+
+    while ($row = $result->fetch_assoc()) {
+        $pros[] = $row;
+    }
+
+    return $pros;
+}

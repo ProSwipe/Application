@@ -1,6 +1,7 @@
 <?php
 include('../include/header.php');
 include('../include/method.php');
+include('../database/database.php');
 
 checkConnection();
 
@@ -8,14 +9,19 @@ $errors = array();
 $allPro = $_SESSION['pro'];
 
 $currentProfile = $allPro[0];
+$user = getUserFromEmail($_SESSION['email']);
 
 if (!empty($_POST['like'])) {
+    if (!empty($allPro)) {
+        addUserProTable($user['id'], $currentProfile['id']);
+    }
     array_shift($allPro);
     $_SESSION['pro'] = $allPro;
     $currentProfile = $allPro[0];
-    if (empty($allPro)) {
-        $errors[] = "Aucun profil trouvé.";
-    }
+}
+
+if (empty($allPro)) {
+    $errors[] = "Aucun profil trouvé.";
 }
 ?>
 
@@ -31,7 +37,7 @@ if (!empty($_POST['like'])) {
 <main class="flex flex-col items-center">
     <?php if (count($errors) <= 0) : ?>
         <img
-            class="w-[20rem] h-[30rem] rounded-xl"
+            class="w-[20rem] h-[30rem] rounded-xl animate__animated animate__fadeIn animate__delay-0.2s"
             src="<?php echo $currentProfile['profilePicture'] ?>"
             alt="test image"
         />

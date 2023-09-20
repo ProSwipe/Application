@@ -9,6 +9,15 @@ $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
 $emptySearchTerm = empty($searchTerm);
 $errors = array();
 
+$user = getUserFromEmail($_SESSION['email']);
+$fetched = getAllProOfUser($user['id']);
+
+$allPro = array();
+
+foreach ($fetched as $pro) {
+    $pro = getPro($pro['proId']);
+    $allPro[] = $pro;
+}
 ?>
 <body>
 <header class="p-[2rem] flex justify-center">
@@ -48,15 +57,19 @@ $errors = array();
         <?php endif ?>
     </form>
 
-    <div class="flex items-center mt-10">
-        <div class="w-20 rounded-full ring-4 ring-primary ring-offset-base-100 ring-offset-2">
-            <img class="rounded-full" src="../../assets/profil_vide-2143549024.jpg" alt="Profile Image" />
-        </div>
-        <div class="ml-4">
-            <p class="text-lg font-medium text-sky-600">Développeur Web</p>
-            <p class="text-sm font-medium text-gray-500">Amandine</p>
-        </div>
-    </div>
+    <?php if (count($allPro) > 0) : ?>
+        <?php foreach ($allPro as $pro) : ?>
+            <div class="flex items-center mt-10 animate__animated animate__fadeIn animate__delay-0.2s">
+                <div class="w-20 rounded-full ring-4 ring-primary ring-offset-base-100 ring-offset-2">
+                    <img class="rounded-full" src="<?php echo $pro['profilePicture'] ?>" alt="Profile Image" />
+                </div>
+                <div class="ml-4">
+                    <p class="text-lg font-medium text-sky-600"><?php echo $pro['job'] ?></p>
+                    <p class="text-sm font-medium text-gray-500"><?php echo $pro['name'] ?></p>
+                </div>
+            </div>
+        <?php endforeach ?>
+    <?php endif ?>
 
 </main>
 

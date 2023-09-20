@@ -16,6 +16,12 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         if (password_verify($password, $storedPassword)) {
             $_SESSION['email'] = $email;
             $_SESSION['pro'] = getAllPro();
+
+            $fetched = getAllProOfUser(getUserFromEmail($email)['id']);
+            foreach ($fetched as $pro) {
+                array_shift($_SESSION['pro']);
+            }
+
             redirect('dashboard/index.php');
             exit();
         } else {

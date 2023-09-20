@@ -61,6 +61,23 @@ function createProTable()
     }
 }
 
+function createUserProTable() {
+    global $db;
+
+    $createTableQuery = "CREATE TABLE IF NOT EXISTS userPro (
+            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            userId INT(6),
+            proId INT(6)
+        )";
+
+    if ($db->query($createTableQuery)) {
+        echo "La table 'userPro' a été créée avec succès.";
+    } else {
+        echo "Erreur lors de la création de la table 'userPro': " . $db->error;
+    }
+}
+
 createUsersTable();
 createProTable();
+createUserProTable();
 ?>
