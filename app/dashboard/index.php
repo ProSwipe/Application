@@ -16,7 +16,7 @@ checkConnection();
 
 <main class="flex flex-col items-center">
     <img
-        class="w-[15rem]"
+        class="w-[20rem]"
         src="../assets/image.png"
         alt="test image"
     />
@@ -27,15 +27,15 @@ checkConnection();
         >
             <img
                 class="h-[2rem]"
-                src="../assets/close.svg"
-                alt="close"
+                src="../assets/back.svg"
+                alt="rollback"
             />
         </div>
         <div class="bg-blue-400 rounded-full p-[1rem]">
             <img
                 class="h-[2rem]"
-                src="../assets/close.svg"
-                alt="close"
+                src="../assets/heart.svg"
+                alt="like"
             />
         </div>
         <div
@@ -44,7 +44,7 @@ checkConnection();
             <img
                 class="h-[2rem]"
                 src="../assets/close.svg"
-                alt="close"
+                alt="dislike"
             />
         </div>
     </div>
