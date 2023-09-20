@@ -744,6 +744,10 @@ video {
   width: 100%;
 }
 
+.w-\[5rem\] {
+  width: 5rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -816,6 +820,10 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .border {
