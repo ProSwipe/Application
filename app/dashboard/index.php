@@ -20,6 +20,13 @@ if (!empty($_POST['like'])) {
     $currentProfile = $allPro[0];
 }
 
+if (!empty($_POST['dislike'])) {
+    array_shift($allPro);
+    $_SESSION['pro'] = $allPro;
+    $currentProfile = $allPro[0];
+}
+
+
 if (empty($allPro)) {
     $errors[] = "Aucun profil trouvé.";
 }
@@ -72,14 +79,18 @@ if (empty($allPro)) {
                 </button>
             </form>
         </div>
-        <div
-            class="h-[3rem] w-[3rem] bg-blue-400 rounded-full p-[.5rem]"
-        >
-            <img
-                class="h-[2rem]"
-                src="../assets/close.svg"
-                alt="dislike"
-            />
+        <div>
+            <form action="/dashboard/index.php" method="post" data-turbo="false">
+                <input type="hidden" name="dislike" value="test">
+                <button type="submit" class="h-[3rem] w-[3rem] bg-blue-400 rounded-full p-[.5rem]">
+                    <img
+                            class="h-[2rem]"
+                            src="../assets/close.svg"
+                            alt="dislike"
+                    />
+                </button>
+            </form>
+
         </div>
     </div>
 
