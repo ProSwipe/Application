@@ -1,31 +1,31 @@
 <?php
 include('../include/header.php');
 
-$errors = array();
-
-include '../database/database.php';
-include '../include/method.php';
-
-if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    if (isAccExists($email)) {
-        $errors[] = "Ce compte existe déjà.";
-    } else {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        if (createAcc($name, $email, $hashedPassword)) {
-            redirect('auth/login.php');
-            exit();
-        } else {
-            $errors[] = "Erreur lors de la création du compte.";
-        }
-    }
-}
-?>
-
+// $errors = array();
+//
+// include '../database/database.php';
+// include '../include/method.php';
+//
+// if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])) {
+//     $name = $_POST['name'];
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
+//
+//     if (isAccExists($email)) {
+//         $errors[] = "Ce compte existe déjà.";
+//     } else {
+//         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+//
+//         if (createAcc($name, $email, $hashedPassword)) {
+//             redirect('auth/login.php');
+//             exit();
+//         } else {
+//             $errors[] = "Erreur lors de la création du compte.";
+//         }
+//     }
+// }
+// ?>
+//
 <body>
 <div class="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
@@ -36,7 +36,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div class="bg-gray-100 py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form action="/auth/register.php" method="post" data-turbo="false">
+            <form action="/include/register.inc.php" method="post" data-turbo="false">
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700" for="name">
