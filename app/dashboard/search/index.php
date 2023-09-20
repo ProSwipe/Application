@@ -58,7 +58,7 @@ if (!empty($searchTerm)) {
     </form>
 
     <?php if ($emptySearchTerm): ?>
-        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 animate__animated animate__fadeIn animate__delay-0.2s">
             <form action="/dashboard/search/index.php" method="get" data-turbo="false"
                   class="text-white bg-sky-600 hover:bg-sky-700 font-medium rounded-3xl text-sm px-2 py-2 text-center">
                 <input type="hidden" name="search" value="Développeur web">
@@ -85,7 +85,7 @@ if (!empty($searchTerm)) {
     <?php if (count($professionals) > 0) : ?>
         <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
             <?php foreach ($professionals as $professional) : ?>
-                <a class="max-w-md mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden"
+                <a class="max-w-md mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden animate__animated animate__fadeInUp"
                    href="/dashboard/search/profil.php?id=<?php echo $professional['id'] ?>">
                     <img class="w-full h-56 object-cover object-center"
                          src="<?php echo $professional['profilePicture'] ?>"

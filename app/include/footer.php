@@ -1,5 +1,4 @@
-<div
-    class="flex bg-blue-400 rounded-[20px] h-[4rem] w-[20rem] justify-around items-center">
+<div class="fixed bottom-10 left-0 right-0 bg-blue-400 rounded-xl h-[4rem] w-[20rem] mx-auto flex justify-around items-center">
     <a data-turbo-preload href="/dashboard/index.php">
         <img class="h-[2rem]" src="../assets/heart.svg" alt="close" />
     </a>

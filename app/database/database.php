@@ -3,7 +3,7 @@ $host = 'localhost';
 $port = 3306;
 $dbname = 'proswipe';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 
 $db = new mysqli($host, $user, $pass, $dbname, $port);
 

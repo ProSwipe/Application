@@ -19,6 +19,10 @@ if (isset($_GET['logout']) && isset($_SESSION['email'])) {
     <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
 
     <link href="../assets/css/output.css" rel="stylesheet"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <script src="../assets/js/turbo.js" type="module" async></script>
 </head>
