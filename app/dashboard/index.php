@@ -43,11 +43,16 @@ if (empty($allPro)) {
 
 <main class="flex flex-col items-center">
     <?php if (count($errors) <= 0) : ?>
-        <img
-            class="w-[20rem] h-[30rem] rounded-xl animate__animated animate__fadeIn animate__delay-0.2s"
-            src="<?php echo $currentProfile['profilePicture'] ?>"
-            alt="test image"
-        />
+        <div class="relative animate__animated animate__fadeIn animate__delay-0.2s">
+            <p class="absolute top-0 left-0 m-2 text-white font-bold bg-blue-500 rounded-full px-2 py-1">
+                <?php echo $currentProfile['job'] ?>
+            </p>
+            <img
+                    class="w-[20rem] h-[30rem] rounded-xl"
+                    src="<?php echo $currentProfile['profilePicture'] ?>"
+                    alt="test image"
+            />
+        </div>
     <?php endif ?>
     <?php if (count($errors) > 0) : ?>
         <div class="error">
