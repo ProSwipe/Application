@@ -2,6 +2,9 @@
     <a data-turbo-preload href="/dashboard/index.php">
         <img class="h-[2rem]" src="../assets/heart.svg" alt="close" />
     </a>
+    <a data-turbo-preload href="/dashboard/chat/index.php">
+        <img class="h-[2rem] text-black" src="../assets/chat.svg" alt="close" />
+    </a>
     <a data-turbo-preload href="/dashboard/search/index.php">
         <img class="h-[2rem] text-black" src="../assets/search.svg" alt="close" />
     </a>
