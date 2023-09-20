@@ -6,6 +6,7 @@ include('../../database/database.php');
 checkConnection();
 
 $idProfil = isset($_GET['id']) ? $_GET['id'] : '';
+$user = getUserFromEmail($_SESSION['email']);
 
 if (!$idProfil) {
     redirect('dashboard/search/index.php');
@@ -13,6 +14,20 @@ if (!$idProfil) {
 }
 
 $pro = getPro($idProfil);
+$fetched = getAllProOfUser($user['id']);
+
+
+if (!empty($_POST['like'])) {
+    foreach ($fetched as $item) {
+        if ($item['proId'] == $idProfil) {
+            redirect('dashboard/search/index.php');
+            exit();
+        }
+    }
+
+    addUserProTable($user['id'], $idProfil);
+    redirect('dashboard/chat/index.php');
+}
 ?>
 <body>
 
@@ -47,6 +62,21 @@ $pro = getPro($idProfil);
             <video controls>
                 <source src="<?php echo $pro['jobVideo'] ?>">
             </video>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div>
+            <form action="/dashboard/search/profil.php?id=<?php echo $idProfil ?>" method="post" data-turbo="false">
+                <input type="hidden" name="like" value="test">
+                <button type="submit" class="bg-blue-400 rounded-full p-[1rem]">
+                    <img
+                            class="h-[2rem]"
+                            src="../../assets/heart.svg"
+                            alt="like"
+                    />
+                </button>
+            </form>
         </div>
     </div>
 </main>
