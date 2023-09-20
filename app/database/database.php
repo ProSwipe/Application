@@ -37,6 +37,22 @@ function isAccExists($email)
     return $result->fetch_assoc();
 }
 
+function getUserFromEmail($email) {
+    global $db;
+
+    $email = $db->real_escape_string($email);
+
+    $query = "SELECT * FROM users WHERE email='$email'";
+    $result = $db->query($query);
+    $row = $result->fetch_assoc();
+
+    if ($row) {
+        return $row;
+    }
+
+    return false;
+}
+
 function getUserPassword($email)
 {
     global $db;

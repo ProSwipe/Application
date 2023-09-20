@@ -1,8 +1,11 @@
 <?php
 include('../../include/header.php');
 include('../../include/method.php');
+include('../../database/database.php');
 
 checkConnection();
+
+$user = getUserFromEmail($_SESSION['email']);
 ?>
 
 <body>
@@ -25,7 +28,7 @@ checkConnection();
                     <div class="mt-1">
                         <input autocomplete="name"
                                class="bg-gray-200 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
-                               id="name" name="name" required type="text">
+                               id="name" name="name" required type="text" value="<?php echo $user['name'] ?>">
                     </div>
                 </div>
 
@@ -36,7 +39,7 @@ checkConnection();
                     <div class="mt-1">
                         <input autocomplete="email"
                                class="bg-gray-200 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
-                               id="email" name="email" required type="email">
+                               id="email" name="email" required type="email" value="<?php echo $user['email'] ?>">
                     </div>
                 </div>
 
