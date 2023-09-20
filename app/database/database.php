@@ -86,6 +86,21 @@ function getPro($id) {
     return false;
 }
 
+function getAllPro() {
+    global $db;
+
+    $query = "SELECT * FROM professionnals";
+    $result = $db->query($query);
+
+    $professionals = array();
+
+    while ($row = $result->fetch_assoc()) {
+        $professionals[] = $row;
+    }
+
+    return $professionals;
+}
+
 function getProFromJob($job) {
     global $db;
 

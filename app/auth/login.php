@@ -15,6 +15,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
         if (password_verify($password, $storedPassword)) {
             $_SESSION['email'] = $email;
+            $_SESSION['pro'] = getAllPro();
             redirect('dashboard/index.php');
             exit();
         } else {
