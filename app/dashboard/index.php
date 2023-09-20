@@ -3,6 +3,14 @@ include('../include/header.php');
 include('../include/method.php');
 
 checkConnection();
+
+include('../database/database.php');
+
+$pros = getPros();
+
+if (!empty($_POST['search'])) {
+    echo "t";
+}
 ?>
 
 <body>
@@ -32,11 +40,16 @@ checkConnection();
             />
         </div>
         <div class="bg-blue-400 rounded-full p-[1rem]">
-            <img
-                class="h-[2rem]"
-                src="../assets/close.svg"
-                alt="close"
-            />
+            <form action="/dashboard/index.php" method="post" data-turbo="false">
+                <input type="hidden" name="search" value="like">
+                <button type="submit">
+                    <img
+                            class="h-[2rem]"
+                            src="../assets/close.svg"
+                            alt="close"
+                    />
+                </button>
+            </form>
         </div>
         <div
             class="h-[3rem] w-[3rem] bg-blue-400 rounded-full p-[.5rem]"

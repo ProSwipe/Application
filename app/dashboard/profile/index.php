@@ -26,8 +26,8 @@ checkConnection();
 
     <div class="mt-6 flex justify-center">
         <a href="#"
-           class="text-center transform hover:scale-110 motion-reduce:transform-none duration-300 bg-sky-600 hover:bg-sky-700 text-gray-100 py-4 px-24 rounded-xl items-center w-full">
-            <span>Mon profile</span>
+           class="text-center transform hover:scale-110 motion-reduce:transform-none duration-300 bg-sky-600 hover:bg-sky-700 text-gray-100 py-4 px-12 rounded-xl items-center w-full">
+            <span>Mon profil</span>
         </a>
 
     </div>

@@ -3,7 +3,7 @@ $host = 'localhost';
 $port = 3306;
 $dbname = 'proswipe';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 
 $db = new mysqli($host, $user, $pass, $dbname, $port);
 
@@ -52,6 +52,21 @@ function getUserPassword($email)
     }
 
     return false;
+}
+
+function getPros() {
+    global $db;
+
+    $query = "SELECT * FROM professionnals";
+    $result = $db->query($query);
+
+    $professionals = array();
+
+    while ($row = $result->fetch_assoc()) {
+        $professionals[] = $row;
+    }
+
+    return $professionals;
 }
 
 function getPro($id) {
