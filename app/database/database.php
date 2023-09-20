@@ -3,7 +3,7 @@ $host = 'localhost';
 $port = 3306;
 $dbname = 'proswipe';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 
 $db = new mysqli($host, $user, $pass, $dbname, $port);
 
@@ -85,5 +85,21 @@ function getProFromJob($job) {
     }
 
     return $professionals;
+}
+
+function dislikePro($id, $userId, $status) {
+    global $db;
+
+    $id = $db->real_escape_string($id);
+
+    $query = "SELECT * FROM professionnals WHERE id='$id'";
+    $result = $db->query($query);
+    $row = $result->fetch_assoc();
+
+    $query = "INSERT IGNORE INTO ratings (pro_id, user_id, status) 
+              VALUES('$id', '$userId', '$status')";
+
+    return $db->query($query);
+
 }
 
