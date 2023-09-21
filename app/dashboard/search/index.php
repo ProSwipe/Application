@@ -20,9 +20,9 @@ if (!empty($searchTerm)) {
 ?>
 
 <body>
-<header class="p-[2rem] flex justify-center">
+<header class="p-[1.7rem] flex justify-center">
     <img
-            class="h-[4rem] w-[4rem]"
+            class="h-[3rem] w-[3rem]"
             src="../assets/logo.png"
             alt="proswipe logo"
     />

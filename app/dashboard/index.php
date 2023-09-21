@@ -33,9 +33,9 @@ if (empty($allPro)) {
 ?>
 
 <body>
-<header class="p-[2rem] flex justify-center">
+<header class="p-[1.7rem] flex justify-center">
     <img
-        class="h-[4rem] w-[4rem]"
+        class="h-[3rem] w-[3rem]"
         src="../assets/logo.png"
         alt="proswipe logo"
     />
@@ -48,7 +48,7 @@ if (empty($allPro)) {
                 <?php echo $currentProfile['job'] ?>
             </p>
             <img
-                    class="w-[20rem] h-[30rem] rounded-xl"
+                    class="w-[20rem] h-[25rem] rounded-xl"
                     src="<?php echo $currentProfile['profilePicture'] ?>"
                     alt="test image"
             />
