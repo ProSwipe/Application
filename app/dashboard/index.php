@@ -48,7 +48,7 @@ if (empty($allPro)) {
                 <?php echo $currentProfile['job'] ?>
             </p>
             <img
-                    class="w-[20rem] h-[30rem] rounded-xl"
+                    class="w-[20rem] h-[25rem] rounded-xl"
                     src="<?php echo $currentProfile['profilePicture'] ?>"
                     alt="test image"
             />

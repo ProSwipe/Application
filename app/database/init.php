@@ -38,12 +38,12 @@ function createProTable()
         echo "La table 'professionnals' a été créée avec succès.";
 
         $data = array(
-            array("John Doe", "john@example.com", "hashedpassword1", "http://localhost/assets/img/pro/profile1.png", "Développeur web", "Description du travail 1", "http://localhost/assets/video/pro/video1.mp4"),
-            array("Jane Smith", "jane@example.com", "hashedpassword2", "http://localhost/assets/img/pro/profile1.png", "Designer graphique", "Description du travail 2", "http://localhost/assets/video/pro/video2.mp4"),
-            array("Alice Johnson", "alice@example.com", "hashedpassword3", "http://localhost/assets/img/pro/profile1.png", "Administrateur système", "Description du travail 3", "http://localhost/assets/video/pro/video3.mp4"),
-            array("Bob Brown", "bob@example.com", "hashedpassword4", "http://localhost/assets/img/pro/profile1.png", "Ingénieur logiciel", "Description du travail 4", "http://localhost/assets/video/pro/video4.mp4"),
-            array("Eve White", "eve@example.com", "hashedpassword5", "http://localhost/assets/img/pro/profile1.png", "Analyste de données", "Description du travail 5", "http://localhost/assets/video/pro/video5.mp4"),
-            array("Charlie Green", "charlie@example.com", "hashedpassword6", "http://localhost/assets/img/pro/profile1.png", "Consultant en sécurité", "Description du travail 6", "http://localhost/assets/video/pro/video6.mp4")
+            array("John Doe", "john@example.com", "hashedpassword1", "https://proswipe.gaetandev.fr/assets/img/pro/profile2.jpg", "Développeur web", "Description du travail 1", "https://proswipe.gaetandev.fr/assets/video/pro/video1.mp4"),
+            array("Jane Smith", "jane@example.com", "hashedpassword2", "https://proswipe.gaetandev.fr/assets/img/pro/profile1.png", "Designer graphique", "Description du travail 2", "https://proswipe.gaetandev.fr/assets/video/pro/video2.mp4"),
+            array("Alice Johnson", "alice@example.com", "hashedpassword3", "https://proswipe.gaetandev.fr/assets/img/pro/profile3.jpg", "Administrateur système", "Description du travail 3", "https://proswipe.gaetandev.fr/assets/video/pro/video3.mp4"),
+            array("Bob Brown", "bob@example.com", "hashedpassword4", "https://proswipe.gaetandev.fr/assets/img/pro/profile4.webp", "Ingénieur logiciel", "Description du travail 4", "https://proswipe.gaetandev.fr/assets/video/pro/video4.mp4"),
+            array("Eve White", "eve@example.com", "hashedpassword5", "https://proswipe.gaetandev.fr/assets/img/pro/profile5.jpg", "Analyste de données", "Description du travail 5", "https://proswipe.gaetandev.fr/assets/video/pro/video5.mp4"),
+            array("Charlie Green", "charlie@example.com", "hashedpassword6", "https://proswipe.gaetandev.fr/assets/img/pro/profile6.jpg", "Consultant en sécurité", "Description du travail 6", "https://proswipe.gaetandev.fr/assets/video/pro/video6.mp4")
         );
 
         $stmt = $db->prepare("INSERT IGNORE INTO professionnals (name, email, password, profilePicture, job, jobDescription, jobVideo) VALUES (?, ?, ?, ?, ?, ?, ?)");
