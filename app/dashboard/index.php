@@ -43,7 +43,7 @@ if (empty($allPro)) {
 
 <main class="flex flex-col items-center">
     <?php if (count($errors) <= 0) : ?>
-        <div class="relative animate__animated animate__fadeIn animate__delay-0.2s">
+        <div class="h-[10rem] w-[6rem] relative animate__animated animate__fadeIn animate__delay-0.2s">
             <p class="absolute top-0 left-0 m-2 text-white font-bold bg-blue-500 rounded-full px-2 py-1">
                 <?php echo $currentProfile['job'] ?>
             </p>
