@@ -904,6 +904,14 @@ video {
   padding: 2rem;
 }
 
+.p-\[1\.5rem\] {
+  padding: 1.5rem;
+}
+
+.p-\[1\.7rem\] {
+  padding: 1.7rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
