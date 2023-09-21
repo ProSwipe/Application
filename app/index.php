@@ -10,7 +10,7 @@
         alt="logo"
     />
 
-    <div class="mb-[1rem] overflow-x-hidden">
+    <div class="mb-[1rem] overflow-x-hidden mx-auto max-w-[1000px]">
         <div class="my-[1rem] flex items-center overflow-x-hidden relative">
              <img
                 class="absolute left-[90%]"
